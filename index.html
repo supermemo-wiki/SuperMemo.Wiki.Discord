@@ -1,21 +1,25 @@
 <head>
-  <script>
-    var widgetBot = document.getElementById('widgetbot');
-    var observer = new MutationObserver(function(mutations) {
-      mutations.forEach(function(mutationRecord) {
-        widgetBot.style['border-radius'] = '';
-      });
-    });
-    
-    observer.observe(widgetBot, { attributes: true, attributeFilter: ['style'] });
-  </script>
 </head>
 <html>
-  <widgetbot id="widgetbot"
-             server="673071773700587521"
-             channel="673071774438522907"
-             width="100%"
-             height="100%"
-             shard="https://e.widgetbot.io"></widgetbot>
-<script src="https://cdn.jsdelivr.net/npm/@widgetbot/html-embed"></script>
+  <body style="background-color: rgb(54, 57, 62);">
+    <widgetbot id="widgetbot"
+               server="673071773700587521"
+               channel="673071774438522907"
+               width="100%"
+               height="100%"
+               shard="https://e.widgetbot.io"></widgetbot>
+               
+    <script>
+      var widgetBot = document.getElementById('widgetbot');
+      
+      var observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutationRecord) {
+          widgetBot.style['border-radius'] = '';
+        });
+      });
+      
+      observer.observe(widgetBot, { attributes: true, attributeFilter: ['style'] });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@widgetbot/html-embed"></script>
+  </body>
 </html>
