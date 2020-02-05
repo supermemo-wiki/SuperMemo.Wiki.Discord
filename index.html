@@ -1,19 +1,21 @@
 <head>
-  <style>
-    widgetbot {
-      border-width: 0;
-      border-radius: 0;
-      margin: 0;
-    }
-  </style>
+  <script>
+    var widgetBot = document.getElementById('widgetbot');
+    var observer = new MutationObserver(function(mutations) {
+      mutations.forEach(function(mutationRecord) {
+        widgetBot.style['border-radius'] = '';
+      });
+    });
+    
+    observer.observe(widgetBot, { attributes: true, attributeFilter: ['style'] });
+  </script>
 </head>
 <html>
-  <widgetbot
-  server="673071773700587521"
-  channel="673071774438522907"
-  width="100%"
-  height="100%"
-  shard="https://e.widgetbot.io"
-></widgetbot>
+  <widgetbot id="widgetbot"
+             server="673071773700587521"
+             channel="673071774438522907"
+             width="100%"
+             height="100%"
+             shard="https://e.widgetbot.io"></widgetbot>
 <script src="https://cdn.jsdelivr.net/npm/@widgetbot/html-embed"></script>
 </html>
