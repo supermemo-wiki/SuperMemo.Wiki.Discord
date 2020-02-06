@@ -1,10 +1,16 @@
 <head>
+  <style>
+    widgetbot {
+      box-shadow: 0 4px 8px rgba(0,0,0,0.12), 0 2px 4px rgba(0,0,0,0.24);
+    }
+  </style>
 </head>
 <html>
   <body style="background-color: rgb(54, 57, 62);">
     <widgetbot id="widgetbot"
                server="673071773700587521"
                channel="673071774438522907"
+               defer="true"
                width="100%"
                height="100%"
                shard="https://e.widgetbot.io"></widgetbot>
@@ -12,13 +18,26 @@
     <script>
       var widgetBot = document.getElementById('widgetbot');
       
+      //
+      // Remove border
       var observer = new MutationObserver(function(mutations) {
         mutations.forEach(function(mutationRecord) {
           widgetBot.style['border-radius'] = '';
         });
       });
       
-      observer.observe(widgetBot, { attributes: true, attributeFilter: ['style'] });
+      //observer.observe(widgetBot, { attributes: true, attributeFilter: ['style'] });
+      
+      //
+      // Wait for animation to finish to add shadow
+      /*
+      function animationEnded() {
+          widgetBot.style['box-shadow'] = "0 4px 8px rgba(0,0,0,0.12), 0 2px 4px rgba(0,0,0,0.24)";
+      }
+      
+      widgetBot.addEventListener('webkitAnimationEnd', animationEnded);
+      widgetBot.addEventListener('transitionend', animationEnded);
+      */
     </script>
     <script src="https://cdn.jsdelivr.net/npm/@widgetbot/html-embed"></script>
   </body>
