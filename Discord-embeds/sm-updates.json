@@ -1,0 +1,11 @@
+{
+  "username": "SuperMemo",
+  "avatar_url": "https://github.com/supermemo/Documentation/raw/master/docs/content/images/icons/SuperMemo-64.png",
+  "embeds": [
+    {
+      "title": "How to check the latest version",
+      "description": "- **SM 18**: latest version [here](http://www.supermemo.org/install/18_6f4922f45568161a8cdf4ad2299f6d23/sm18.ver)
+- **SM 17**: latest version [here](http://www.supermemo.org/install/17_70efdf2ec9b086079795c442636b55fb/sm17.ver)"
+    }
+  ]
+}
